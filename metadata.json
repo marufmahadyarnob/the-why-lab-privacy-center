@@ -2,5 +2,5 @@
   "name": "The Why Lab | Privacy Center",
   "description": "Bilingual Privacy Center for The Why Lab educational platform in English and Bengali.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }
