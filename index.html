@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Why Lab | Privacy Center</title>
+    <meta
+      name="description"
+      content="Learn how The Why Lab handles personal information, privacy, cookies, and third-party services. Read our Privacy Policy in English or Bengali."
+    />
+    <meta name="theme-color" content="#0A192F" />
+    <!-- Set canonical URL after publishing on GitHub Pages -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="The Why Lab" />
+    <meta property="og:title" content="The Why Lab | Privacy Center" />
+    <meta
+      property="og:description"
+      content="Learn how The Why Lab handles personal information, privacy, cookies, and third-party services. Read our Privacy Policy in English or Bengali."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="The Why Lab | Privacy Center" />
+    <meta
+      name="twitter:description"
+      content="Learn how The Why Lab handles personal information, privacy, cookies, and third-party services. Read our Privacy Policy in English or Bengali."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      (function () {
+        var theme = localStorage.getItem('whylab_theme');
+        var dark = theme === 'dark' || (!theme && matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+        var lang = localStorage.getItem('whylab_lang');
+        if (lang === 'bn' || lang === 'en') document.documentElement.lang = lang;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="skip">Skip to main content</a>
+
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="container header-bar">
+        <a class="brand" href="#top" aria-label="The Why Lab Privacy Center">
+          <svg class="brand-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <rect width="40" height="40" rx="9" fill="#0A192F" />
+            <path d="M10.5 28C14 26.2 17.2 26.2 20 28C22.8 26.2 26 26.2 29.5 28" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15.8 14.5C15.8 12.1 17.6 10.5 20.1 10.5C22.5 10.5 24.3 12 24.3 14.2C24.3 15.9 23.2 17 21.7 17.8C20.5 18.6 20 19.3 20 20.8" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="20" cy="24.1" r="1.45" fill="#64FFDA" />
+          </svg>
+          <span data-i18n="brand">The Why Lab</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#overview" data-i18n="nav.overview">Overview</a>
+          <a href="#policy" data-i18n="nav.policy">Privacy Policy</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language selection">
+            <button type="button" id="btn-lang-en" data-lang="en" aria-pressed="true" aria-label="Switch language to English">EN</button>
+            <button type="button" id="btn-lang-bn" data-lang="bn" aria-pressed="false" aria-label="Switch language to Bengali">বাংলা</button>
+          </div>
+
+          <button type="button" class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+          </button>
+
+          <button type="button" class="icon-btn menu-btn" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation" hidden>
+        <ul>
+          <li><a href="#overview" data-i18n="nav.overview">Overview</a></li>
+          <li><a href="#policy" data-i18n="nav.policy">Privacy Policy</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container">
+          <div class="hero-inner">
+            <p class="hero-kicker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+              </svg>
+              <span data-i18n="hero.kicker">THE WHY LAB</span>
+            </p>
+
+            <h1 id="hero-heading" data-i18n="hero.title">Privacy Center</h1>
+            <p class="hero-lead" data-i18n="hero.lead">
+              Your privacy matters. Learn how we handle information and protect your trust.
+            </p>
+            <p class="hero-intro" data-i18n="hero.intro">
+              The Why Lab is an educational content platform dedicated to explaining science, mathematics, technology, everyday phenomena, and interesting questions in simple and engaging ways. This page outlines how we handle information across our website and official social channels.
+            </p>
+
+            <div class="hero-dates">
+              <span>
+                <span data-i18n="dates.effectiveLabel">Effective Date</span>:
+                <strong data-i18n="dates.effectiveValue">November 14, 2026</strong>
+              </span>
+              <span class="sep" aria-hidden="true">&middot;</span>
+              <span>
+                <span data-i18n="dates.updatedLabel">Last Updated</span>:
+                <strong data-i18n="dates.updatedValue">November 14, 2026</strong>
+              </span>
+            </div>
+
+            <div class="toolbar" role="group" aria-label="Document actions">
+              <button type="button" class="btn btn-primary" id="btn-print">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 6 2 18 2 18 9" />
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                  <rect x="6" y="14" width="12" height="8" />
+                </svg>
+                <span data-i18n="actions.print">Print Policy</span>
+              </button>
+
+              <button type="button" class="btn" id="btn-pdf">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                <span data-i18n="actions.pdf">Download as PDF</span>
+              </button>
+
+              <button type="button" class="btn" id="btn-copy-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                </svg>
+                <span data-i18n="actions.copyLink">Copy Page Link</span>
+              </button>
+
+              <button type="button" class="btn" id="btn-copy-email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+                <span data-i18n="actions.copyEmail">Copy Contact Email</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section overview-section" id="overview" aria-labelledby="overview-heading">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="overview-heading" data-i18n="overview.title">Privacy at a Glance</h2>
+            <p data-i18n="overview.subtitle">A concise summary of our core principles before you read the full policy.</p>
+          </div>
+
+          <div class="glance-list">
+            <div class="glance-item">
+              <div class="glance-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="overview.noSaleTitle">We do not sell personal information</h3>
+                <p data-i18n="overview.noSaleDesc">We never sell, rent, or trade your personal information to advertisers or data brokers.</p>
+              </div>
+            </div>
+
+            <div class="glance-item">
+              <div class="glance-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="overview.openTitle">No sign-up required for public content</h3>
+                <p data-i18n="overview.openDesc">Visitors can access our public educational content without submitting personal information directly to us.</p>
+              </div>
+            </div>
+
+            <div class="glance-item">
+              <div class="glance-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="overview.voluntaryTitle">Voluntary messages and inquiries</h3>
+                <p data-i18n="overview.voluntaryDesc">We may receive details you choose to share when contacting us via email or messaging our social pages.</p>
+              </div>
+            </div>
+
+            <div class="glance-item">
+              <div class="glance-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="overview.thirdPartyTitle">Independent third-party policies</h3>
+                <p data-i18n="overview.thirdPartyDesc">Hosting providers and platforms like GitHub Pages, Facebook, Instagram, and YouTube follow their own privacy practices.</p>
+              </div>
+            </div>
+
+            <div class="glance-item">
+              <div class="glance-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </div>
+              <div>
+                <h3 data-i18n="overview.requestsTitle">Direct privacy requests</h3>
+                <p data-i18n="overview.requestsDesc">You can contact us anytime regarding questions, corrections, or deletion requests for data you shared with us.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="policy" aria-labelledby="policy-heading">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="policy-heading" data-i18n="policy.title">Full Privacy Policy</h2>
+            <p data-i18n="policy.subtitle">Complete policy covering information practices, third-party platforms, and your privacy rights.</p>
+          </div>
+
+          <div class="policy-layout">
+            <details class="toc-mobile" id="toc-mobile">
+              <summary>
+                <span data-i18n="toc.title">Table of Contents</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </summary>
+              <nav class="toc-mobile-body" aria-label="Table of Contents (Mobile)">
+                <ul class="toc-list" id="toc-mobile-list"></ul>
+              </nav>
+            </details>
+
+            <aside class="toc-desktop" aria-label="Table of Contents">
+              <h3 class="toc-label" data-i18n="toc.title">Table of Contents</h3>
+              <nav>
+                <ul class="toc-list" id="toc-desktop-list"></ul>
+              </nav>
+            </aside>
+
+            <div class="policy-sheet">
+              <article class="policy-article" id="policy-article">
+                <section class="policy-block" id="section-1">
+                  <h3><span class="policy-num">01</span><span>Introduction</span></h3>
+                  <p>Welcome to The Why Lab.</p>
+                  <p>The Why Lab is an educational content platform dedicated to exploring interesting questions, explaining scientific concepts, sharing knowledge, and making learning simple and engaging.</p>
+                  <p>We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and protect information when you visit our website, interact with our social media pages, or communicate with us.</p>
+                  <p>By accessing our content or communicating with us, you acknowledge that you have read this Privacy Policy.</p>
+                </section>
+
+                <section class="policy-block" id="section-2">
+                  <h3><span class="policy-num">02</span><span>Scope of This Policy</span></h3>
+                  <p>This Privacy Policy applies to information received or handled by The Why Lab in connection with:</p>
+                  <ul>
+                    <li>Our static website and Privacy Center hosted on GitHub Pages.</li>
+                    <li>Direct communications sent to us by email or direct messages.</li>
+                    <li>Interactions on our official social media pages on Facebook, Instagram, and YouTube to the extent those interactions are visible to or managed by us.</li>
+                  </ul>
+                  <p>This policy distinguishes between information directly received and controlled by The Why Lab and data independently collected or processed by external platforms under their own privacy policies.</p>
+                </section>
+
+                <section class="policy-block" id="section-3">
+                  <h3><span class="policy-num">03</span><span>Information We Collect</span></h3>
+                  <p>We do not require visitors to provide personal information to access our public educational content.</p>
+                  <p>However, we may receive certain information when you voluntarily interact with us, including:</p>
+                  <ul>
+                    <li>Your name or display name.</li>
+                    <li>Your email address.</li>
+                    <li>Your social media username.</li>
+                    <li>Messages, comments, questions, and feedback.</li>
+                    <li>Any other information you voluntarily provide when contacting us.</li>
+                  </ul>
+                </section>
+
+                <section class="policy-block" id="section-4">
+                  <h3><span class="policy-num">04</span><span>Information Collected Automatically</span></h3>
+                  <p>We may receive limited technical information through our website hosting provider or third-party platforms, depending on the services enabled.</p>
+                  <p>For example, because this website is hosted on GitHub Pages, GitHub may automatically log technical connection details—such as your IP address, browser type, operating system, referring URL, and access timestamps—for security, reliability, and service operation under GitHub's own privacy practices.</p>
+                  <p>The Why Lab does not run a custom backend database or user tracking system on this static site.</p>
+                </section>
+
+                <section class="policy-block" id="section-5">
+                  <h3><span class="policy-num">05</span><span>How We Use Your Information</span></h3>
+                  <p>We may use the information you voluntarily provide for the following purposes:</p>
+                  <ul>
+                    <li>To respond to questions, messages, and inquiries.</li>
+                    <li>To communicate with our audience.</li>
+                    <li>To improve the quality of our educational content.</li>
+                    <li>To understand audience feedback and engagement.</li>
+                    <li>To maintain and improve our website and social media presence.</li>
+                    <li>To prevent spam, abuse, and unauthorized activities.</li>
+                    <li>To maintain the security and proper operation of our services.</li>
+                  </ul>
+                  <p>We do not sell, rent, or trade your personal information.</p>
+                </section>
+
+                <section class="policy-block" id="section-6">
+                  <h3><span class="policy-num">06</span><span>Comments, Messages, and Public Interactions</span></h3>
+                  <p>When you comment on our educational posts, react to content, or message our pages, information you share in public areas may be visible to us and to other users.</p>
+                  <p>Please keep in mind that content posted publicly on social media or public comment sections can be viewed, copied, or shared by others. We encourage you not to include sensitive personal details in public comments.</p>
+                </section>
+
+                <section class="policy-block" id="section-7">
+                  <h3><span class="policy-num">07</span><span>Cookies and Similar Technologies</span></h3>
+                  <p>Our website may use cookies or similar technologies to improve user experience, maintain essential functionality, and understand website performance.</p>
+                  <p>Cookies are small text files stored on your device by websites. You can manage or disable cookies through your browser settings; however, disabling certain browser storage features may affect some website functionality.</p>
+                  <p>On this Privacy Center site, we use browser localStorage strictly for non-sensitive interface preferences such as your chosen language (English or Bengali) and display theme (Light or Dark mode). The use of any additional analytics or tracking technologies depends on the services actually implemented on our website or third-party platforms.</p>
+                </section>
+
+                <section class="policy-block" id="section-8">
+                  <h3><span class="policy-num">08</span><span>Third-Party Services and Links</span></h3>
+                  <p>The Why Lab may use or link to third-party platforms and services, including:</p>
+                  <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                    <li>Google (for example, web typography delivery via Google Fonts)</li>
+                    <li>GitHub (including GitHub Pages for static website hosting)</li>
+                  </ul>
+                  <p>Our content may also include links to external websites, educational resources, or other online services. These third-party websites and services operate independently and maintain their own privacy policies and security practices.</p>
+                  <p>We do not control how third-party services collect, process, store, or use personal information, and we are not responsible for their content or privacy practices. We encourage you to review their privacy policies before providing any personal information.</p>
+                </section>
+
+                <section class="policy-block" id="section-9">
+                  <h3><span class="policy-num">09</span><span>Social Media Platforms</span></h3>
+                  <p>When you interact with The Why Lab on Facebook, Instagram, or YouTube, certain information may become visible to us or other users, including:</p>
+                  <ul>
+                    <li>Public profile information.</li>
+                    <li>Comments and reactions.</li>
+                    <li>Messages sent to our pages.</li>
+                    <li>Content shared or posted publicly.</li>
+                    <li>Aggregated engagement and audience statistics provided by the platform.</li>
+                  </ul>
+                  <p>Your interactions on these platforms are independently governed by the terms and privacy policies of Facebook, Instagram, and YouTube, which operate separately from The Why Lab.</p>
+                </section>
+
+                <section class="policy-block" id="section-10">
+                  <h3><span class="policy-num">10</span><span>How We Share Information</span></h3>
+                  <p>We do not sell, rent, or trade your personal information to third parties.</p>
+                  <p>However, information may be disclosed in limited circumstances:</p>
+                  <ul>
+                    <li>When you provide permission.</li>
+                    <li>When disclosure is necessary to operate or maintain our services through relevant service providers.</li>
+                    <li>When required by applicable laws or legal processes.</li>
+                    <li>When necessary to protect our rights, security, or the safety of others.</li>
+                    <li>When investigating spam, fraudulent activities, or misuse of our services.</li>
+                  </ul>
+                  <p>We aim to limit any disclosure to what is reasonably necessary.</p>
+                </section>
+
+                <section class="policy-block" id="section-11">
+                  <h3><span class="policy-num">11</span><span>Data Retention</span></h3>
+                  <p>We retain personal information only for as long as reasonably necessary for the purposes described in this Privacy Policy. The retention period may depend on:</p>
+                  <ul>
+                    <li>The nature of the information.</li>
+                    <li>The purpose for which it was provided.</li>
+                    <li>The need to respond to inquiries.</li>
+                    <li>Applicable legal requirements.</li>
+                  </ul>
+                  <p>When information is no longer necessary, we will take reasonable steps to delete it or stop using it where practical. Information retained by third-party platforms is subject to their respective retention policies.</p>
+                </section>
+
+                <section class="policy-block" id="section-12">
+                  <h3><span class="policy-num">12</span><span>Data Security</span></h3>
+                  <p>We take reasonable measures to protect information that is under our control, including appropriate access restrictions and reasonable security practices.</p>
+                  <p>However, no method of electronic storage, internet transmission, or online communication is completely secure. Therefore, we cannot guarantee absolute security of information transmitted or stored online.</p>
+                </section>
+
+                <section class="policy-block" id="section-13">
+                  <h3><span class="policy-num">13</span><span>Children's Privacy</span></h3>
+                  <p>The Why Lab publishes educational content intended for a general audience, including students and young learners.</p>
+                  <p>We do not knowingly request or intentionally collect personal information directly from children through our website. We encourage parents and guardians to supervise children's online activities and guide them when using social media platforms.</p>
+                  <p>If a parent or guardian believes that a child has provided personal information directly to us, they may contact us so that we can review the matter and take appropriate action.</p>
+                </section>
+
+                <section class="policy-block" id="section-14">
+                  <h3><span class="policy-num">14</span><span>Your Privacy Rights</span></h3>
+                  <p>Depending on applicable laws and circumstances, you may contact us to:</p>
+                  <ul>
+                    <li>Request information about personal data you have shared with us.</li>
+                    <li>Request correction of inaccurate information.</li>
+                    <li>Request deletion of information you voluntarily provided.</li>
+                    <li>Ask us to stop using your information for a particular purpose.</li>
+                    <li>Withdraw consent where applicable.</li>
+                  </ul>
+                  <p>We will review reasonable requests and respond appropriately. Please note that certain information may remain stored by third-party services, which operate independently of The Why Lab.</p>
+                </section>
+
+                <section class="policy-block" id="section-15">
+                  <h3><span class="policy-num">15</span><span>International Data Processing</span></h3>
+                  <p>Some third-party services used to access or interact with our content may process information on servers located in different countries.</p>
+                  <p>The handling of such information may be subject to the laws and regulations of those countries. We do not control the independent data processing activities of third-party platforms.</p>
+                </section>
+
+                <section class="policy-block" id="section-16">
+                  <h3><span class="policy-num">16</span><span>Legal Basis and Applicable Law</span></h3>
+                  <p>Where applicable, we rely on straightforward, practical grounds when handling information you voluntarily share with us—such as your consent when you choose to contact us, our legitimate need to answer inquiries, improve educational materials, and prevent spam or abuse, and compliance with applicable legal obligations.</p>
+                  <p>Your rights and our obligations may vary depending on your jurisdiction and applicable local data protection laws.</p>
+                </section>
+
+                <section class="policy-block" id="section-17">
+                  <h3><span class="policy-num">17</span><span>Changes to This Privacy Policy</span></h3>
+                  <p>We may update this Privacy Policy from time to time to reflect changes in our services, website functionality, or applicable requirements.</p>
+                  <p>Any updates will be published on this page with a revised Last Updated date. We encourage visitors to review this page periodically.</p>
+                </section>
+
+                <section class="policy-block" id="section-18">
+                  <h3><span class="policy-num">18</span><span>Contact Information</span></h3>
+                  <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+                  <div class="policy-callout">
+                    <p><strong>The Why Lab</strong></p>
+                    <p>Email: <a class="inline-link" href="mailto:contact@mma.pro.bd?subject=Privacy%20Policy%20Inquiry">contact@mma.pro.bd</a></p>
+                    <p>Subject: Privacy Policy Inquiry</p>
+                  </div>
+                  <p>We will make reasonable efforts to respond to privacy-related inquiries.</p>
+                </section>
+
+                <section class="policy-block" id="section-19">
+                  <h3><span class="policy-num">19</span><span>Our Privacy Commitment</span></h3>
+                  <p>At The Why Lab, we believe that learning should be accessible, transparent, and trustworthy. We respect our audience and aim to handle personal information responsibly.</p>
+                  <p>Our commitment is simple:</p>
+                  <ul>
+                    <li>We do not sell personal information.</li>
+                    <li>We respect our audience's privacy.</li>
+                    <li>We aim to use information responsibly.</li>
+                    <li>We encourage safe and responsible online interactions.</li>
+                    <li>We strive to maintain transparency in our practices.</li>
+                  </ul>
+                  <p>Thank you for being part of The Why Lab community. Keep questioning. Keep learning. Stay curious.</p>
+                </section>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="faq" aria-labelledby="faq-heading">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="faq-heading" data-i18n="faq.title">Frequently Asked Questions</h2>
+            <p data-i18n="faq.subtitle">Clear answers to common questions about how your privacy works with The Why Lab.</p>
+          </div>
+
+          <div class="faq-list" id="faq-list">
+            <div class="faq-item">
+              <button type="button" class="faq-btn" id="faq-q-0" aria-expanded="true" aria-controls="faq-a-0">
+                <span>Does The Why Lab collect personal information?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer" id="faq-a-0" role="region" aria-labelledby="faq-q-0">
+                <p>You do not need to submit personal information to browse our public educational content. However, if you voluntarily email us, send a message, or comment on our social pages, we may receive details such as your name, email address, social media username, and the content of your message.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-btn" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">
+                <span>Does The Why Lab sell personal information?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1" hidden>
+                <p>No. We do not sell, rent, or trade your personal information to any third party under any circumstances.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-btn" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">
+                <span>Does the website use cookies?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer" id="faq-a-2" role="region" aria-labelledby="faq-q-2" hidden>
+                <p>On this static Privacy Center page, we use browser localStorage strictly to remember non-sensitive interface preferences such as your selected language and light/dark theme. Third-party services or hosting providers you interact with may use cookies or similar technologies under their own policies, which you can manage through your browser settings.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-btn" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">
+                <span>Are Facebook, Instagram, and YouTube responsible for their own data collection?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer" id="faq-a-3" role="region" aria-labelledby="faq-q-3" hidden>
+                <p>Yes. When you view, comment on, react to, or message our pages on Facebook, Instagram, or YouTube, those platforms independently collect and process data according to their own terms and privacy policies, which The Why Lab does not control.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-btn" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
+                <span>How can I request deletion of information I shared?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer" id="faq-a-4" role="region" aria-labelledby="faq-q-4" hidden>
+                <p>You can email us at contact@mma.pro.bd with the subject "Privacy Policy Inquiry" and describe the information you previously sent directly to us. Note that public comments or messages hosted on third-party platforms like Facebook, Instagram, or YouTube are also subject to those platforms' own deletion tools and policies.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-btn" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">
+                <span>How can I contact The Why Lab regarding privacy?</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer" id="faq-a-5" role="region" aria-labelledby="faq-q-5" hidden>
+                <p>You can reach us directly by emailing contact@mma.pro.bd with the subject line "Privacy Policy Inquiry". We make reasonable efforts to review and respond to all privacy-related inquiries.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="section-head">
+            <h2 id="contact-heading" data-i18n="contact.title">Contact Us</h2>
+            <p data-i18n="contact.subtitle">Reach out directly regarding privacy questions, corrections, or data deletion requests.</p>
+          </div>
+
+          <div class="contact-card">
+            <div>
+              <h3 data-i18n="brand">The Why Lab</h3>
+              <p class="contact-lead" data-i18n="contact.lead">For privacy-related questions and requests:</p>
+              <p class="contact-email">
+                <span data-i18n="contact.emailLabel">Email</span>:
+                <a id="contact-email-link" href="mailto:contact@mma.pro.bd?subject=Privacy%20Policy%20Inquiry">contact@mma.pro.bd</a>
+              </p>
+              <div class="contact-actions toolbar">
+                <a class="btn btn-primary" id="contact-mailto-btn" href="mailto:contact@mma.pro.bd?subject=Privacy%20Policy%20Inquiry">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
+                  <span data-i18n="actions.emailUs">Send Email</span>
+                </a>
+                <button type="button" class="btn" id="contact-copy-email">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                  </svg>
+                  <span data-i18n="actions.copyEmailShort">Copy Email</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="social-col">
+              <p class="social-title" data-i18n="contact.socialTitle">Official Platforms</p>
+              <div class="social-list">
+                <a class="social-btn" id="social-facebook" href="https://www.facebook.com/TheWhyLabPage/" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+                <a class="social-btn" id="social-instagram" href="https://www.instagram.com/the_why_lab_insta/" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+                <a class="social-btn" id="social-youtube" href="https://www.youtube.com/channel/UC2zSkq4FXvIHK0GvAq2YyjA" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                  </svg>
+                  <span>YouTube</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-row">
+          <div>
+            <div class="footer-brand">
+              <svg width="26" height="26" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <rect width="40" height="40" rx="8" fill="#112240" />
+                <path d="M10.5 28C14 26.2 17.2 26.2 20 28C22.8 26.2 26 26.2 29.5 28" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15.8 14.5C15.8 12.1 17.6 10.5 20.1 10.5C22.5 10.5 24.3 12 24.3 14.2C24.3 15.9 23.2 17 21.7 17.8C20.5 18.6 20 19.3 20 20.8" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="20" cy="24.1" r="1.45" fill="#64FFDA" />
+              </svg>
+              <span data-i18n="brand">The Why Lab</span>
+            </div>
+            <p class="footer-tagline" data-i18n="tagline">Think deeper. Stay curious. Keep learning.</p>
+          </div>
+
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="#policy" data-i18n="nav.policy">Privacy Policy</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-meta">
+            <span data-i18n="footer.copyright">&copy; 2026 The Why Lab. All Rights Reserved.</span>
+            <span class="sep" aria-hidden="true">&middot;</span>
+            <span>
+              <span data-i18n="dates.updatedLabel">Last Updated</span>:
+              <span data-i18n="dates.updatedValue">November 14, 2026</span>
+            </span>
+          </div>
+          <a class="footer-top" href="#top" data-i18n="footer.top">Back to Top</a>
+        </div>
+      </div>
+    </footer>
+
+    <button type="button" class="back-top-btn" id="back-top-btn" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="modal-backdrop" id="pdf-modal" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title" hidden>
+      <div class="modal-box">
+        <div class="modal-head">
+          <h3 id="pdf-modal-title" data-i18n="pdf.title">Save Privacy Policy as PDF</h3>
+          <button type="button" class="icon-btn" id="pdf-close" aria-label="Close dialog">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <p class="modal-desc" data-i18n="pdf.desc">You can save a clean, printable PDF copy using your browser's built-in print dialog:</p>
+        <ol class="modal-steps">
+          <li data-i18n="pdf.step1">Click "Open Print Dialog" below.</li>
+          <li data-i18n="pdf.step2">In the Destination or Printer field, select "Save as PDF".</li>
+          <li data-i18n="pdf.step3">Click Save and choose where to store your PDF file.</li>
+        </ol>
+        <div class="modal-actions">
+          <button type="button" class="btn" id="pdf-cancel" data-i18n="pdf.cancel">Cancel</button>
+          <button type="button" class="btn btn-primary" id="pdf-confirm" data-i18n="pdf.confirm">Open Print Dialog</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
